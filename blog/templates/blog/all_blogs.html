@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<div class="container text-center">
+
+  <h1 class="display-1">Welcome to my blogs</h1>
+  <br>
+  <p class="display-4">I have {{ blogs.count }} blogs now:</p>
+
+  {% for blog in blogs %}
+  <p class="display-6"><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></p>
+  <p class="h5">{{ blog.date|date:'M j Y'}}</p>
+  <p>{{ blog.description|safe|truncatechars:100 }}</p>
+  {% endfor %}
+
+</div>
+
+{% endblock %}
