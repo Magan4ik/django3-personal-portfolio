@@ -23,11 +23,11 @@
 
   <div class="card m-2 border-2 border-success" style="width: 18rem;">
     <div class="m-2">
-      <img src="{{ project.image.url }}" class="card-img-top">
+      <a href="{{ project.image.url }}"><img src="{{ project.image.url }}" class="card-img-top"></a>
     </div>
     <div class="card-body">
       <h4 class="card-title">{{ project.title }}</h4>
-      <p class="card-text h6">{{ project.description }}</p>
+      <p class="card-text h6">{{ project.description|safe }}</p>
       <a href="{{ project.url }}" class="btn btn-primary" target="_blank">Go to GitHub</a>
     </div>
   </div>
