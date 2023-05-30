@@ -11,21 +11,21 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand">
+        <a class="navbar-brand" href="{% url 'home' %}">
           <img src="{% static 'portfolio/Gamepad.png' %}" width="40" height="40">
-          Magan's
+          Magan
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="mx-auto me-0">
             <ul class="nav nav-pills">
               <li class="nav-item">
-                <a class="nav-link link-dark" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a class="nav-link link-dark" aria-current="page" href="{% url 'blog:all_blogs' %}">Блог</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-dark" href="{% static 'portfolio/Resume_Salnikov.pdf' %}" target="_blank">Resume</a>
+                <a class="nav-link link-dark" href="{% static 'portfolio/Resume_Salnikov.pdf' %}" target="_blank">Резюме</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="{% url 'blog:all_blogs' %}">Blog</a>
+                <a class="nav-link active" href="https://github.com/Magan4ik" target="_blank">GitHub</a>
               </li>
             </ul>
           </div>

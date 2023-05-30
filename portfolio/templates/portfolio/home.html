@@ -12,21 +12,22 @@
   <div class="pt-5 pb-5">
     <img src="{% static 'portfolio/photo_resume.png' %}" width="550" height="550">
   </div>
-  <h1>Denis Salnikov or Magan<h1>
+  <h1>Денис Сальніков<h1>
+  <p>(Magan)</p>
 
-  <p class="text-start">My projects</p>
+  <p class="text-start mt-5">Мої проекти</p>
   <hr class="border-2">
 
   <div class="row pt-5 ms-5 mx-auto">
   {% for project in projects %}
 
-  <div class="card m-2 border-0" style="width: 18rem;">
+  <div class="card m-2 border-2 border-success" style="width: 18rem;">
     <div class="m-2">
       <img src="{{ project.image.url }}" class="card-img-top">
     </div>
     <div class="card-body">
       <h4 class="card-title">{{ project.title }}</h4>
-      <p class="card-text h6">{{ project.description|truncatechars:100 }}</p>
+      <p class="card-text h6">{{ project.description }}</p>
       <a href="{{ project.url }}" class="btn btn-primary" target="_blank">Go to GitHub</a>
     </div>
   </div>
